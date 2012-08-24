@@ -1,0 +1,97 @@
+
+/* ---------- Color Module Styles ----------- */
+
+body,
+body.overlay {
+  color: #3b3b3b;
+}
+.comment .comment-arrow {
+  border-color: #ffffff;
+}
+#page,
+#main-wrapper,
+#main-menu-links li.active-trail a {
+  background: #ffffff;
+}
+
+#main-menu-links li.active a {
+  background-color: #011c25;
+  background-image: -moz-linear-gradient(top, #2f5665 0%, #011c25 100%);
+  background-image: -ms-linear-gradient(top, #2f5665 0%, #011c25 100%);
+  background-image: -o-linear-gradient(top, #2f5665 0%, #011c25 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2f5665), color-stop(1, #011c25));
+  background-image: -webkit-linear-gradient(top, #2f5665 0%, #011c25 100%);
+  background-image: linear-gradient(top, #2f5665 0%, #011c25 100%);
+  border:medium #e9ece8 solid;
+  border-top:medium #2f5665 solid;
+  margin-top:-3px;
+}
+
+#main-menu {
+  background-color: #171717;
+  background-image: -moz-linear-gradient(top, #323232 0%, #171717 100%);
+  background-image: -ms-linear-gradient(top, #323232 0%, #171717 100%);
+  background-image: -o-linear-gradient(top, #323232 0%, #171717 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #323232), color-stop(1, #171717));
+  background-image: -webkit-linear-gradient(top, #323232 0%, #171717 100%);
+  background-image: linear-gradient(top, #323232 0%, #171717 100%);
+}
+
+.tabs ul.primary li a.active {
+  background-color: #ffffff;
+}
+.tabs ul.primary li.active a {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+#header {
+  background-color: #011c25;
+
+}
+
+#headertop {
+  height:100px;
+  background-image: -moz-linear-gradient(top, #06364a 0%, #011c25 100%);
+  background-image: -ms-linear-gradient(top, #06364a 0%, #011c25 100%);
+  background-image: -o-linear-gradient(top, #06364a 0%, #011c25 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #06364a), color-stop(1, #011c25));
+  background-image: -webkit-linear-gradient(top, #06364a 0%, #011c25 100%);
+  background-image: linear-gradient(top, #06364a 0%, #011c25 100%);
+}
+
+a {
+  color: #5b8b37;
+}
+a:hover,
+a:focus {
+  color: #5b8b37;
+}
+a:active {
+  color: #5b8b37;
+}
+.sidebar .block {
+  background-color: #f6f6f2;
+  border-color: #f9f9f9;
+}
+#page-wrapper {
+  background:url(http://globalchange.gov/templates/globalchange/images/page-bg.jpg) top left repeat-x #292929;
+}
+
+#footer-wrapper {
+  background: #2f2f2f;
+  background-image: -moz-linear-gradient(top, #2f2f2f 0%, #191919 100%);
+  background-image: -ms-linear-gradient(top, #2f2f2f 0%, #191919 100%);
+  background-image: -o-linear-gradient(top, #2f2f2f 0%, #191919 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2f2f2f), color-stop(1, #191919));
+  background-image: -webkit-linear-gradient(top, #2f2f2f 0%, #191919 100%);
+  background-image: linear-gradient(top, #2f2f2f 0%, #191919 100%);
+
+}
+.region-header,
+.region-header a,
+.region-header li a.active,
+#name-and-slogan,
+#name-and-slogan a,
+#secondary-menu-links li a {
+  color: #fffeff;
+}
