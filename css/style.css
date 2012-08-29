@@ -503,8 +503,8 @@ h1#site-name {
 }
 #main-menu-links a:hover,
 #main-menu-links a:focus {
-  background: #f6f6f2;
-  background: rgba(255, 255, 255, 0.95);
+  background: #2f5665;
+
 }
 #main-menu-links a:active {
   background: #b3b3b3;
