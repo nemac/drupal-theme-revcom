@@ -77,14 +77,14 @@ a:active {
 }
 
 #footer-wrapper {
-  background: #2f2f2f;
-  background-image: -moz-linear-gradient(top, #2f2f2f 0%, #191919 100%);
+  background: #1c5b93;
+ /* background-image: -moz-linear-gradient(top, #2f2f2f 0%, #191919 100%);
   background-image: -ms-linear-gradient(top, #2f2f2f 0%, #191919 100%);
   background-image: -o-linear-gradient(top, #2f2f2f 0%, #191919 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2f2f2f), color-stop(1, #191919));
   background-image: -webkit-linear-gradient(top, #2f2f2f 0%, #191919 100%);
   background-image: linear-gradient(top, #2f2f2f 0%, #191919 100%);
-
+*/
 }
 .region-header,
 .region-header a,

@@ -877,8 +877,7 @@ ul.links {
   padding-right: 0px !important;
 }
 #footer-wrapper a {
-  color: #538B37;
-  color: rgba(83, 139, 55, 1);
+  color: #fff;
   font-weight: bold;
 }
 #footer-wrapper a:hover,
