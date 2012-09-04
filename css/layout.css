@@ -15,9 +15,10 @@ body,
 
 #page {
 	text-align:left;
-	width:948px;
+	width:960px;
 	margin-left:auto;
 	margin-right:auto;
+	background:#FFF url(../images/globe.png) top left no-repeat;
   -khtml-border-radius: 0 0 10px 10px;
   -moz-border-radius: 0 0 10px 10px;
   -webkit-border-top-left-radius: 0;
@@ -49,14 +50,13 @@ body,
   position: relative;
 }
 
-#header {
+/*#header {
   height:263px;
-}
+} */
 
 #header div.section {
-	width:948px;
+	width:960px;
 }
-
 
 #headerimg {
 	background:url(http://globalchange.gov/images/header_images/header-6.jpg) no-repeat bottom;

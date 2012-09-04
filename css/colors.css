@@ -8,33 +8,34 @@ body.overlay {
 .comment .comment-arrow {
   border-color: #ffffff;
 }
-#page,
-#main-wrapper,
+
+
 #main-menu-links li.active-trail a {
   background: #ffffff;
 }
 
 #main-menu-links li.active a {
-  background-color: #011c25;
-  background-image: -moz-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: -ms-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: -o-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2f5665), color-stop(1, #011c25));
-  background-image: -webkit-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: linear-gradient(top, #2f5665 0%, #011c25 100%);
+  background-color: #1c5b93;
+  color:#184b5e;
+  background-image: -moz-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: -ms-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: -o-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1c5b93), color-stop(1, #FFF));
+  background-image: -webkit-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: linear-gradient(top, #1c5b93 0%, #FFF 100%);
   border:medium #e9ece8 solid;
-  border-top:medium #2f5665 solid;
-  margin-top:-3px;
+  border-top:none;
+  margin-top:1px;
 }
 
 #main-menu {
-  background-color: #171717;
-  background-image: -moz-linear-gradient(top, #323232 0%, #171717 100%);
+  background-color: #1c5b93;
+/*  background-image: -moz-linear-gradient(top, #323232 0%, #171717 100%);
   background-image: -ms-linear-gradient(top, #323232 0%, #171717 100%);
   background-image: -o-linear-gradient(top, #323232 0%, #171717 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #323232), color-stop(1, #171717));
   background-image: -webkit-linear-gradient(top, #323232 0%, #171717 100%);
-  background-image: linear-gradient(top, #323232 0%, #171717 100%);
+  background-image: linear-gradient(top, #323232 0%, #171717 100%); */
 }
 
 .tabs ul.primary li a.active {
@@ -44,37 +45,35 @@ body.overlay {
   background-color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
-#header {
-  background-color: #011c25;
-
-}
 
 #headertop {
   height:100px;
-  background-image: -moz-linear-gradient(top, #06364a 0%, #011c25 100%);
+  background:none;
+/*  background-image: -moz-linear-gradient(top, #06364a 0%, #011c25 100%);
   background-image: -ms-linear-gradient(top, #06364a 0%, #011c25 100%);
   background-image: -o-linear-gradient(top, #06364a 0%, #011c25 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #06364a), color-stop(1, #011c25));
   background-image: -webkit-linear-gradient(top, #06364a 0%, #011c25 100%);
-  background-image: linear-gradient(top, #06364a 0%, #011c25 100%);
+  background-image: linear-gradient(top, #06364a 0%, #011c25 100%);*/
 }
 
 a {
-  color: #5b8b37;
+  color: #11538e;
 }
 a:hover,
 a:focus {
-  color: #5b8b37;
+  color: #11538e;
 }
 a:active {
-  color: #5b8b37;
+  color: #11538e;
 }
 .sidebar .block {
-  background-color: #f6f6f2;
-  border-color: #f9f9f9;
+  background-color: #fff;
+  border: thin #CCC solid;
 }
 #page-wrapper {
-  background:url(http://globalchange.gov/templates/globalchange/images/page-bg.jpg) top left repeat-x #292929;
+  /*background:url(http://globalchange.gov/templates/globalchange/images/page-bg.jpg) top left repeat-x #292929*/
+  background:#FFF;
 }
 
 #footer-wrapper {
@@ -94,4 +93,10 @@ a:active {
 #name-and-slogan a,
 #secondary-menu-links li a {
   color: #fffeff;
+}
+
+#content {
+	background-color:#FFF;
+	border:thin solid #ccc;
+	margin-left:-8px;
 }

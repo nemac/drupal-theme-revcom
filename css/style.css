@@ -296,6 +296,7 @@ ul.tips {
 }
 #logo {
   float: left; /* LTR */
+  margin-top:25px;
   padding: 15px 15px 15px 10px; /* LTR */
 }
 #name-and-slogan {
@@ -474,7 +475,8 @@ h1#site-name {
 }
 
 #main-menu ul.links {
-  border-top:medium #e9ece8 solid;
+	border:none;
+/*  border-top:medium #e9ece8 solid; */
   border-collapse:collapse;
   padding-bottom:5px;
 }
@@ -509,16 +511,17 @@ h1#site-name {
 #main-menu-links a:focus {
   /*background: #f6f6f2;
   background: rgba(255, 255, 255, 0.95);*/
-  background-color: #011c25;
-  background-image: -moz-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: -ms-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: -o-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2f5665), color-stop(1, #011c25));
-  background-image: -webkit-linear-gradient(top, #2f5665 0%, #011c25 100%);
-  background-image: linear-gradient(top, #2f5665 0%, #011c25 100%);
+  background-color: #1c5b93;
+  color:#184b5e;
+  background-image: -moz-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: -ms-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: -o-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1c5b93), color-stop(1, #FFF));
+  background-image: -webkit-linear-gradient(top, #1c5b93 0%, #FFF 100%);
+  background-image: linear-gradient(top, #1c5b93 0%, #FFF 100%);
   border:medium #e9ece8 solid;
-  border-top:medium #2f5665 solid;
-  margin-top:-3px;
+  border-top:none;
+  margin-top:1px;
 }s a:active {
   /*background:
 #main-menu-link #b3b3b3;
