@@ -117,9 +117,9 @@ global $base_url;
 	  }
 	  $group_title = $content['og_group_ref'][0]['#title'].' - ';
 	  $chapter_reference = str_replace($group_title, '', $content['field_chapter_reference'][0]['#markup']);
-	  print '<p><strong>Chapter:</strong> '.$chapter_reference.'<br/>';
+	  print '<h3><strong>Chapter:</strong> '.$chapter_reference.'</h3>';
 	  if($content['field_start_page'][0]['#markup'] == $content['field_end_page'][0]['#markup']){
-	 	 print '<strong>Page:</strong> '.$content['field_start_page'][0]['#markup'];
+	 	 print '<p><strong>Page:</strong> '.$content['field_start_page'][0]['#markup'];
 	  }
 	  else{
 		 print '<strong>Pages:</strong> '.$content['field_start_page'][0]['#markup'].' - '.$content['field_end_page'][0]['#markup'];

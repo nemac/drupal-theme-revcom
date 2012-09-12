@@ -117,8 +117,8 @@ global $base_url;
 	  }
 	  $group_title = $content['og_group_ref'][0]['#title'].' - ';
 	  $chapter_reference = str_replace($group_title, '', $content['field_chapter_reference'][0]['#markup']);
-	  print '<p><strong>Chapter:</strong> '.$chapter_reference.'<br/>';
-	  print '<strong>Page:</strong> '.$content['field_start_page'][0]['#markup'].'</p>';
+	  print '<h3><strong>Chapter:</strong> '.$chapter_reference.'</h3>';
+	  print '<p><strong>Page:</strong> '.$content['field_start_page'][0]['#markup'].'</p>';
 	  //print render($content['body']);
 	  print '<p>'.$content['body'][0]['#markup'].'</p>';
     ?>
