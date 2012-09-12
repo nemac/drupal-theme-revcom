@@ -77,19 +77,15 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
- 
-global $user;
-global $base_url;
-
 ?>
-<?php if ($page && $user->uid != $content['body']['#object']->uid && $user->uid != 1 && !in_array('administrator', $user->roles)): ?>
-  <?php $this_cid = $content['body']['#object']->nid; ?>
-  <?php $this_gid = $content['og_group_ref']['#items'][0]['target_id']; ?>
-    <?php drupal_goto($base_url.'/node/'.$this_gid.'/comment-response/'.$this_cid); ?>
-  <?php endif; ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
+  <?php if (!$page): ?>
+    <h2<?php print $title_attributes; ?>>
+      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    </h2>
+  <?php endif; ?>
   <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
@@ -104,20 +100,10 @@ global $base_url;
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid.'</p>';
-	  if ($user->uid == 1 || in_array('administrator', $user->roles) || $user->uid != $content['body']['#object']->uid) {
-		  if(isset($content['field_comment_flag'])){
-			$flag_count = count($content['field_comment_flag']['#items']);
-			$flags = '';
-			for($i=0;$i<$flag_count;$i++){
-				$flags .= $content['field_comment_flag'][$i]['#markup'].' &nbsp; ';
-			}
-	  		print '<p><strong>Flag(s):</strong> '.$flags;
-		  }
-	  }
-	  //print render($content['body']);
-	  print '<p>'.$content['body'][0]['#markup'].'</p>';	  print '<p><strong>Date Submitted:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->created).'<br/><strong>Last Modified:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->changed).'</p>';
-?>
+      //print render($content);
+	  print render($content['body']);
+	  print render($content['webform']);
+    ?>
   </div>
 
   <?php
