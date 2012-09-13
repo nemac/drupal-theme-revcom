@@ -174,7 +174,7 @@ a.feed-icon {
 table {
   border: 0;
   border-spacing: 0;
-  font-size: 0.857em;
+  font-size: 13px;
   margin: 10px 0;
   width: 100%;
 }
@@ -244,7 +244,7 @@ ul.contextual-links {
   text-shadow: 0 0 0 !important;
 }
 .item-list .pager {
-  font-size: 0.929em;
+  font-size: 13px;
 }
 ul.menu li {
   margin: 0;
@@ -260,6 +260,12 @@ ul.menu li {
 }
 ul.tips {
   padding: 0 0 0 1.25em; /* LTR */
+}
+#user-login-form .item-list ul li{
+  list-style: none;
+}
+#user-login-form .item-list ul{
+  padding: 0.2em 0 0 0; /* LTR */
 }
 
 /* ------------------ Header ------------------ */
@@ -582,7 +588,7 @@ h1#site-name {
 
 #highlighted {
   border-bottom: 1px solid #d3d7d9;
-  font-size: 120%;
+  font-size: 13px;
 }
 
 /* ------------------- Help ------------------- */
@@ -1098,6 +1104,7 @@ ul.action-links li a {
 }
 div.messages {
   margin: 8px 15px;
+  font-size: 15px;
 }
 
 /* -------------- Breadcrumbs   -------------- */
@@ -1300,7 +1307,7 @@ input.form-submit:focus {
   margin-top: 2px;
 }
 .form-item label {
-  font-size: 15px;
+  font-size: 12px;
 }
 .form-type-radio label,
 .form-type-checkbox label {
@@ -1727,12 +1734,12 @@ div.admin-panel .description {
   display: block;
 }
 .menu-minipanels a,.menu-minipanels a:visited{
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-decoration: none;
   font-weight: bold;
 }
 .menu-minipanels a:hover{
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-decoration: underline;
   font-weight: bold;
   background-color: 
@@ -1757,9 +1764,81 @@ p.instructions{
 	font-size: 14px !important;	
 }
 .navigation{
-	font-size: 13px;	
+	font-size: 13px !important;	
 }
 .form-item .description {
   font-size: 12px;
   font-style:italic;
+}
+hr{
+	border: 0;
+	color: #CCCCCC;
+	background-color: #CCCCCC;
+	height: 1px;
+	width: 100%;
+	text-align: left;
+}
+.one-sidebar #content{
+	width: 708px;
+}
+#header div.section, #featured div.section, #messages div.section, #main, #triptych, #footer-columns, #footer{
+	width: 948px;
+}
+.instruction-box{
+  background-color: #D6E0EB;
+  padding: 10px 20px;
+}
+.instruction-box h2{
+	margin-top: 10px !important;
+	color: #000;
+}
+.instruction-box li{
+  font-size: 15px;
+}
+.view-add-chapter-comments-ajax li{
+  font-size: 14px;	
+}
+.view-display-id-my_active_documents_page li{
+  font-size: 14px;	
+}
+.view-display-id-my_active_documents_page h3{
+  font-size: 15px;
+  color:#000;	
+}
+.node-type-review-document .pane-node-body{
+	border-bottom: 1px solid #CCCCCC;
+}
+#help-link{
+  float: right;
+  font-size:14px;	
+}
+.page-node-add-chapter-comments .pane-3 h2{
+	background: url(../images/one.gif) no-repeat; 
+	text-indent: 30px;
+}
+#one{
+	background: url(../images/one.gif) no-repeat; 
+	text-indent: 30px;
+	line-height: 25px;
+}
+.pane-add-chapter-comments-ajax-panel-pane-1 h2{
+	background: url(../images/two.gif) no-repeat; 
+	text-indent: 30px; 
+}
+#two{
+	background: url(../images/two.gif) no-repeat; 
+	text-indent: 30px; 
+	line-height: 25px;
+}
+#three{
+	background: url(../images/three.gif) no-repeat; 
+	text-indent: 30px;
+	line-height: 25px;
+}
+#numbers{
+	padding: 0px 5px;;
+}
+#numbers li{
+	list-style: none;
+	margin: 5px 0px;
 }
