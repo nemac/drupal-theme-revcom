@@ -105,19 +105,18 @@ global $base_url;
       hide($content['comments']);
       hide($content['links']);
 	  
-	  if ($user->uid == 1 || in_array('administrator', $user->roles) || $user->uid != $content['body']['#object']->uid) {
-		  if(isset($content['field_comment_flag'])){
-			$flag_count = count($content['field_comment_flag']['#items']);
-			$flags = '';
-			for($i=0;$i<$flag_count;$i++){
-				$flags .= $content['field_comment_flag'][$i]['#markup'].' &nbsp; ';
-			}
-	  		print '<p><strong>Flag(s):</strong> '.$flags;
-		  }
-	  }
-	  print '<p><strong>Comment ID:</strong></p>';
 	  //print render($content['body']);
+	  print '<p><strong>Status:</strong> '.$content['field_response_status']['#items'][0]['taxonomy_term']->name.'</p>';
 	  print '<p>'.$content['body'][0]['#markup'].'</p>';
+	  
+	if(isset($content['field_edit_tracking'])){
+		$edit_tracking = '<hr/><p class="instructions"><strong>Edit History:</strong>';
+		foreach($content['field_edit_tracking']['#items'] as $edit){
+			$edit_tracking .= '<br/>'.$edit['safe_value'];
+		}
+		$edit_tracking .= '</p>';
+		print $edit_tracking;
+	}
     ?>
   </div>
 

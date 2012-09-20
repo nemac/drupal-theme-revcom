@@ -117,6 +117,17 @@ global $base_url;
 	  }
 	  //print render($content['body']);
 	  print '<p>'.$content['body'][0]['#markup'].'</p>';	  print '<p><strong>Date Submitted:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->created).'<br/><strong>Last Modified:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->changed).'</p>';
+	  
+	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles)) {
+		if(isset($content['field_edit_tracking'])){
+			$edit_tracking = '<hr/><p class="instructions"><strong>Edit History:</strong>';
+			foreach($content['field_edit_tracking']['#items'] as $edit){
+				$edit_tracking .= '<br/>'.$edit['safe_value'];
+			}
+			$edit_tracking .= '</p>';
+			print $edit_tracking;
+		}
+	  }
 ?>
   </div>
 
