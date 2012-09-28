@@ -5,7 +5,7 @@
 
 body {
   line-height: 1.5;
-  font-size: 87.5%;
+  /*font-size: 87.5%;*/
   word-wrap: break-word;
   margin: 0;
   padding: 0;
@@ -29,13 +29,14 @@ h5,
 h6 {
   margin: 1.0em 0 0.5em;
   font-weight: inherit;
+  color: #336699;
 }
 h1 {
-  font-size: 1.357em;
-  color: #000;
+  font-size: 24px;
+  color: #336699;
 }
 h2 {
-  font-size: 1.143em;
+  font-size: 18px;
 }
 p {
   margin: 0 0 1.2em;
@@ -108,7 +109,7 @@ body,
 #site-slogan,
 .ui-widget,
 .comment-form label {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #header,
 #footer-wrapper,
@@ -173,7 +174,7 @@ a.feed-icon {
 table {
   border: 0;
   border-spacing: 0;
-  font-size: 0.857em;
+  font-size: 13px;
   margin: 10px 0;
   width: 100%;
 }
@@ -243,7 +244,7 @@ ul.contextual-links {
   text-shadow: 0 0 0 !important;
 }
 .item-list .pager {
-  font-size: 0.929em;
+  font-size: 13px;
 }
 ul.menu li {
   margin: 0;
@@ -259,6 +260,12 @@ ul.menu li {
 }
 ul.tips {
   padding: 0 0 0 1.25em; /* LTR */
+}
+#user-login-form .item-list ul li{
+  list-style: none;
+}
+#user-login-form .item-list ul{
+  padding: 0.2em 0 0 0; /* LTR */
 }
 
 /* ------------------ Header ------------------ */
@@ -304,7 +311,7 @@ ul.tips {
   margin: 0 0 30px 15px; /* LTR */
 }
 #site-name {
-  font-size: 1.821em;
+  font-size: 15px;
   color: #686868;
   line-height: 1;
 }
@@ -581,7 +588,7 @@ h1#site-name {
 
 #highlighted {
   border-bottom: 1px solid #d3d7d9;
-  font-size: 120%;
+  font-size: 13px;
 }
 
 /* ------------------- Help ------------------- */
@@ -598,16 +605,19 @@ h1#site-name {
   margin-top: 10px;
 }
 h1#page-title {
-  font-size: 2em;
+  font-size: 24px;
   line-height: 1;
 }
 #content h2 {
   margin-bottom: 2px;
-  font-size: 1.429em;
+  font-size: 18px;
   line-height: 1.4;
 }
-.node .content {
-  font-size: 1.071em;
+/*.node .content {
+  font-size: 1.25em;
+}*/
+#content p{
+  font-size: 15px;
 }
 .node-teaser .content {
   font-size: 1em;
@@ -780,19 +790,28 @@ ul.links {
 }
 .sidebar .block {
   border: 1px solid;
-  padding: 15px 20px;
+  padding: 15px;
   margin: 0 0 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .sidebar h2 {
-  margin: 0 0 0.5em;
+  margin: 0;
   border-bottom: 1px solid #d6d6d6;
   padding-bottom: 5px;
   text-shadow: 0 1px 0 #fff;
-  font-size: 1.071em;
+  font-size: 15px;
   line-height: 1.2;
+  color: #336699;
+}
+.sidebar h3 {
+  font-size: 14px;
+  color:#000000;
+}
+.sidebar ul {
+  font-size: 13px;
 }
 .sidebar .block .content {
-  font-size: 0.914em;
+  font-size: 13px;
   line-height: 1.4;
 }
 .sidebar tbody {
@@ -802,6 +821,9 @@ ul.links {
 .sidebar tr.odd {
   background: none;
   border-bottom: 1px solid #d6d6d6;
+}
+.sidebar label{
+	font-size: 12px !important;	
 }
 
 /* ----------------- Triptych ----------------- */
@@ -1013,7 +1035,7 @@ ul.links {
   height: 1.8em;
   line-height: 1.9;
   display: block;
-  font-size: 0.929em;
+  font-size: 12px;
   float: left; /* not LTR */
   padding: 0 10px 3px;
   margin: 0;
@@ -1082,6 +1104,7 @@ ul.action-links li a {
 }
 div.messages {
   margin: 8px 15px;
+  font-size: 15px;
 }
 
 /* -------------- Breadcrumbs   -------------- */
@@ -1284,7 +1307,7 @@ input.form-submit:focus {
   margin-top: 2px;
 }
 .form-item label {
-  font-size: 0.929em;
+  font-size: 12px;
 }
 .form-type-radio label,
 .form-type-checkbox label {
@@ -1711,13 +1734,132 @@ div.admin-panel .description {
   display: block;
 }
 .menu-minipanels a,.menu-minipanels a:visited{
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-decoration: none;
   font-weight: bold;
 }
 .menu-minipanels a:hover{
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-decoration: underline;
   font-weight: bold;
-  background-color: 
+}
+
+/* ---------- Misc ----------- */
+.instructions p{
+	font-size: 12px !important;
+	font-style: italic;	
+}
+p.instructions{
+	font-size: 12px !important;
+	font-style: italic;	
+}
+.pane-public-review-documents-links ul{
+	font-size: 14px !important;	
+}
+.pane-public-review-documents-links li{
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.view-public-review-documents-links .field-content{
+	margin: 0px !important;
+	padding: 0px !important;
+	border: 0px !important;
+}
+.pane-my-pending-documents ul{
+	font-size: 14px !important;	
+}
+.pane-public-review-documents{
+	font-size: 14px !important;	
+}
+.navigation{
+	font-size: 13px !important;	
+}
+.form-item .description {
+  font-size: 12px;
+  font-style:italic;
+}
+hr{
+	border: 0;
+	color: #CCCCCC;
+	background-color: #CCCCCC;
+	height: 1px;
+	width: 100%;
+	text-align: left;
+}
+.one-sidebar #content{
+	width: 708px;
+}
+#header div.section, #featured div.section, #messages div.section, #main, #triptych, #footer-columns, #footer{
+	width: 948px;
+}
+.instruction-box{
+  background-color: #D6E0EB;
+  padding: 10px 20px;
+}
+.instruction-box h2{
+	margin-top: 10px !important;
+	color: #000;
+}
+.instruction-box li{
+  font-size: 15px;
+}
+.view-add-chapter-comments-ajax li{
+  font-size: 14px;	
+}
+.view-display-id-my_active_documents_page li{
+  font-size: 14px;	
+}
+.view-display-id-my_active_documents_page h3{
+  font-size: 15px;
+  color:#000;	
+}
+.node-type-review-document .pane-node-body{
+	border-bottom: 1px solid #CCCCCC;
+}
+#help-link{
+  float: right;
+  font-size:14px;	
+}
+.page-node-add-chapter-comments .pane-3 h2{
+	background: url(../images/one.gif) no-repeat; 
+	text-indent: 30px;
+}
+#one{
+	background: url(../images/one.gif) no-repeat; 
+	text-indent: 30px;
+	line-height: 25px;
+}
+.pane-add-chapter-comments-ajax-panel-pane-1 h2{
+	background: url(../images/two.gif) no-repeat; 
+	text-indent: 30px; 
+}
+#two{
+	background: url(../images/two.gif) no-repeat; 
+	text-indent: 30px; 
+	line-height: 25px;
+}
+#three{
+	background: url(../images/three.gif) no-repeat; 
+	text-indent: 30px;
+	line-height: 25px;
+}
+#numbers{
+	padding: 0px 5px;;
+}
+#numbers li{
+	list-style: none;
+	margin: 5px 0px;
+}
+.page-user .field-item{
+	font-size:15px;	
+}
+.page-user .field-label{
+	font-size:15px;
+	margin-top:10px;
+}
+.page-user dl{
+	font-size:15px;
+}
+.pane-show-response a{
+	font-size: 13px;	
 }

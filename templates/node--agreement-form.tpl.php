@@ -77,19 +77,15 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
- 
-global $user;
-global $base_url;
-
 ?>
-  <?php if ($page): ?>
-  <?php $this_cid = $content['field_comment_reference']['#items'][0]['target_id']; ?>
-  <?php $this_gid = $content['og_group_ref']['#items'][0]['target_id']; ?>
-    <?php drupal_goto($base_url.'/node/'.$this_gid.'/comment-response/'.$this_cid); ?>
-  <?php endif; ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
+  <?php if (!$page): ?>
+    <h2<?php print $title_attributes; ?>>
+      <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    </h2>
+  <?php endif; ?>
   <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
@@ -104,19 +100,9 @@ global $base_url;
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-	  
-	  //print render($content['body']);
-	  print '<p><strong>Status:</strong> '.$content['field_response_status']['#items'][0]['taxonomy_term']->name.'</p>';
-	  print '<p>'.$content['body'][0]['#markup'].'</p>';
-	  
-	if(isset($content['field_edit_tracking'])){
-		$edit_tracking = '<hr/><p class="instructions"><strong>Edit History:</strong>';
-		foreach($content['field_edit_tracking']['#items'] as $edit){
-			$edit_tracking .= '<br/>'.$edit['safe_value'];
-		}
-		$edit_tracking .= '</p>';
-		print $edit_tracking;
-	}
+      //print render($content);
+	  print render($content['body']);
+	  print render($content['webform']);
     ?>
   </div>
 

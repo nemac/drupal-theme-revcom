@@ -84,6 +84,15 @@
  * @see bartik_process_page()
  * @see html.tpl.php
  */
+
+// Replace the Comment title with the Review Document Title for display
+if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
+	if(isset($node->og_group_ref['und'])){
+		$group = node_load($node->og_group_ref['und'][0]['target_id']);
+		$title = $group->title;
+	}
+}
+
 ?>
 <div id="page-wrapper"><div id="page">
 
