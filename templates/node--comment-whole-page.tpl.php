@@ -104,19 +104,15 @@ global $base_url;
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid;
-	  print ' &nbsp; <strong>User ID:</strong> '.$content['body']['#object']->uid;
-	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles) || $user->uid != $content['body']['#object']->uid) {
+	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid.'</p>';
+	  if ($user->uid == 1 || in_array('administrator', $user->roles) || $user->uid != $content['body']['#object']->uid) {
 		  if(isset($content['field_comment_flag'])){
 			$flag_count = count($content['field_comment_flag']['#items']);
 			$flags = '';
 			for($i=0;$i<$flag_count;$i++){
-				if($i > 0){
-					$flags .= ', ';	
-				}
-				$flags .= $content['field_comment_flag'][$i]['#markup'];
+				$flags .= $content['field_comment_flag'][$i]['#markup'].' &nbsp; ';
 			}
-	  		print '<br/><strong>Flag(s):</strong> '.$flags;
+	  		print '<p><strong>Flag(s):</strong> '.$flags;
 		  }
 	  }
 	  $group_title = $content['og_group_ref'][0]['#title'].' - ';
