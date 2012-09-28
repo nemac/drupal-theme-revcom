@@ -1853,7 +1853,7 @@ hr{
 .page-user .field-item{
 	font-size:15px;	
 }
-.page-user .field-label{
+.page-user .field-label, .views-exposed-form label{
 	font-size:15px;
 	margin-top:10px;
 }
@@ -1862,4 +1862,7 @@ hr{
 }
 .pane-show-response a{
 	font-size: 13px;	
+}
+#edit-uid-raw-wrapper, .view-display-id-document_comments_export_preview_page .views-submit-button{
+	clear:left;
 }
