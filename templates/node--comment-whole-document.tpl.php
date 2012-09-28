@@ -104,7 +104,7 @@ global $base_url;
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-	  
+	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid.'</p>';
 	  if ($user->uid == 1 || in_array('administrator', $user->roles) || $user->uid != $content['body']['#object']->uid) {
 		  if(isset($content['field_comment_flag'])){
 			$flag_count = count($content['field_comment_flag']['#items']);
@@ -116,8 +116,19 @@ global $base_url;
 		  }
 	  }
 	  //print render($content['body']);
-	  print '<p>'.$content['body'][0]['#markup'].'</p>';
-    ?>
+	  print '<p>'.$content['body'][0]['#markup'].'</p>';	  print '<p><strong>Date Submitted:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->created).'<br/><strong>Last Modified:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->changed).'</p>';
+	  
+	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles)) {
+		if(isset($content['field_edit_tracking'])){
+			$edit_tracking = '<hr/><p class="instructions"><strong>Edit History:</strong>';
+			foreach($content['field_edit_tracking']['#items'] as $edit){
+				$edit_tracking .= '<br/>'.$edit['safe_value'];
+			}
+			$edit_tracking .= '</p>';
+			print $edit_tracking;
+		}
+	  }
+?>
   </div>
 
   <?php
