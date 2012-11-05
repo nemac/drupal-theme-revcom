@@ -226,11 +226,16 @@ table ul.links {
 table ul.links li {
   padding: 0 1em 0 0;
 }
+td p{
+  font-size: 13px !important;
+  margin-bottom: 0px;	
+}
 
 /* ------------------ List Styles ------------------ */
 
 .block ol,
 .block ul {
+  font-size: 15px;
   margin: 0;
   padding: 0 0 0.25em 1em; /* LTR */
 }
@@ -1853,7 +1858,7 @@ hr{
 .page-user .field-item{
 	font-size:15px;	
 }
-.page-user .field-label{
+.page-user .field-label, .views-exposed-form label{
 	font-size:15px;
 	margin-top:10px;
 }
@@ -1862,4 +1867,38 @@ hr{
 }
 .pane-show-response a{
 	font-size: 13px;	
+}
+.view-document-comments #edit-uid-raw-wrapper,.view-document-comments #edit-field-start-page-value-wrapper, .view-document-comments-export #edit-uid-raw-wrapper,.view-document-comments-export #edit-field-start-page-value-wrapper{
+	clear:left;
+}
+#markup-to{
+	font-weight: bold;
+	margin-bottom: 0px;	
+}
+.view-id-view_comments_responses td{
+	vertical-align:top;
+}
+.view-id-view_comments_responses .views-field-rendered-entity, .view-id-view_comments_responses .views-field-php{
+	width: 50%;
+}
+#offline-comments-link{
+	float:right;
+	margin: 20px 0px 0px 0px;	
+}
+#views-exposed-form-document-comments-all-comments-page, #views-exposed-form-document-comments-export-document-comments-export-preview-page, #views-exposed-form-document-comments-flagging-flag-comments-page, #views-exposed-form-all-offline-comments-all-offline-comments{
+	background-color: #D6E0EB;
+	padding: 0px 20px 10px 20px;	
+}
+.views-exposed-form label{
+	font-size:13px;
+	margin-top: 5px;
+}
+.upload_errors{
+	font-weight:bold;
+	color:#900 !important;
+}
+.vbo-views-form #edit-select{
+	background-color: #D6E0EB;
+	border-top: #FFF solid 2px;
+	padding: 10px 20px 0px 20px;	
 }

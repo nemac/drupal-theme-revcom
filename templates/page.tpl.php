@@ -115,7 +115,7 @@ if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
               </strong>
             </div>
           <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+            <h1 id="site-name"<?php //if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
             </h1>
           <?php endif; ?>
