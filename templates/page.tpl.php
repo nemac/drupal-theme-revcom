@@ -185,9 +185,9 @@ if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+    <?php /*if ($breadcrumb): 
+      print '<div id="breadcrumb">'.$breadcrumb.'</div>';
+     endif;*/?>
 
     <?php if ($page['sidebar_first']): ?>
       <div id="sidebar-first" class="column sidebar"><div class="section">

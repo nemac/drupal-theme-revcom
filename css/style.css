@@ -1885,7 +1885,7 @@ hr{
 	float:right;
 	margin: 20px 0px 0px 0px;	
 }
-#views-exposed-form-document-comments-all-comments-page, #views-exposed-form-document-comments-export-document-comments-export-preview-page, #views-exposed-form-document-comments-flagging-flag-comments-page, #views-exposed-form-all-offline-comments-all-offline-comments{
+#views-exposed-form-document-comments-all-comments-page, #views-exposed-form-document-comments-export-document-comments-export-preview-page, #views-exposed-form-document-comments-flagging-flag-comments-page, #views-exposed-form-all-offline-comments-all-offline-comments, #views-exposed-form-manage-site-users-page, #views-exposed-form-review-document-users-review-doc-members-page{
 	background-color: #D6E0EB;
 	padding: 0px 20px 10px 20px;	
 }
