@@ -41,13 +41,22 @@
  * @see template_process()
  */
 
+//Change the page title if it is a content deletion page
+if(strpos($head_title, 'you want to delete') !== FALSE){
+	 $head_title = 'Delete Content | '.$head_title_array['name'];
+}
 //Change the page title if it is the comment edit page
 if(strpos($head_title, 'Edit Comment') !== FALSE){
 	 $head_title = 'Edit Comment | '.$head_title_array['name'];
 }
-//Change the page title if it is a content deletion page
-if(strpos($head_title, 'you want to delete') !== FALSE){
-	 $head_title = 'Delete Content | '.$head_title_array['name'];
+if(strpos($head_title, 'comment ') !== FALSE){
+	 $head_title = 'View Comment | '.$head_title_array['name'];
+}
+if(strpos($head_title, 'Edit Offline Comments') !== FALSE){
+	 $head_title = 'Edit Offline Comment | '.$head_title_array['name'];
+}
+if(strpos($head_title, 'offline comments ') !== FALSE){
+	 $head_title = 'View Offline Comments | '.$head_title_array['name'];
 }
  
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"

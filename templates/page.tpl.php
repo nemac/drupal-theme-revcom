@@ -93,6 +93,13 @@ if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
 	}
 }
 
+// Replace the Offline Comments title with the File ID and File Name for display
+if(isset($node) && strpos($node->type, 'offline_comments') !== FALSE){
+	if(isset($node->field_comments_file['und'])){
+		$title = $node->field_comments_file['und'][0]['filename'];
+	}
+}
+
 ?>
 <div id="page-wrapper"><div id="page">
 

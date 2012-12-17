@@ -1848,6 +1848,9 @@ hr{
 	text-indent: 30px;
 	line-height: 25px;
 }
+#wholedoc{
+	line-height: 25px;
+}
 #numbers{
 	padding: 0px 5px;;
 }
