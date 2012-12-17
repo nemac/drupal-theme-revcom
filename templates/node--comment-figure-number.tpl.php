@@ -119,10 +119,10 @@ global $base_url;
 	  		print '<br/><strong>Flag(s):</strong> '.$flags;
 		  }
 	  }
-	  $group_title = $content['og_group_ref'][0]['#title'].' - ';
 	  $chapter_reference = $content['field_chapter_reference']['#items'][0]['entity']->field_heading['und'][0]['value'];  
 	  print '<p><strong>Chapter:</strong> '.$chapter_reference.'<br/>';
-	  print '<strong>Page:</strong> '.$content['field_start_page'][0]['#markup'].'</p>';
+	  print '<strong>Page:</strong> '.$content['field_start_page'][0]['#markup'].' &nbsp; ';
+	  print '<strong>Figure:</strong> '.$content['field_identifier'][0]['#markup'].'</p>';
 	  //print render($content['body']);
 	  print '<p>'.$content['body'][0]['#markup'].'</p>';	  print '<p><strong>Date Submitted:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->created).'<br/><strong>Last Modified:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->changed).'</p>';
 	  

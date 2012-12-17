@@ -104,23 +104,28 @@ global $base_url;
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid.'</p>';
-	  if ($user->uid == 1 || in_array('administrator', $user->roles) || $user->uid != $content['body']['#object']->uid) {
+	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid;
+	  print ' &nbsp; <strong>User ID:</strong> '.$content['body']['#object']->uid;
+	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles) || $user->uid != $content['body']['#object']->uid) {
 		  if(isset($content['field_comment_flag'])){
 			$flag_count = count($content['field_comment_flag']['#items']);
 			$flags = '';
 			for($i=0;$i<$flag_count;$i++){
-				$flags .= $content['field_comment_flag'][$i]['#markup'].' &nbsp; ';
+				if($i > 0){
+					$flags .= ', ';	
+				}
+				$flags .= $content['field_comment_flag'][$i]['#markup'];
 			}
-	  		print '<p><strong>Flag(s):</strong> '.$flags;
+	  		print '<br/><strong>Flag(s):</strong> '.$flags;
 		  }
 	  }
 	  $chapter_reference = $content['field_chapter_reference']['#items'][0]['entity']->field_heading['und'][0]['value'];  
 	  print '<p><strong>Chapter:</strong> '.$chapter_reference.'<br/>';
-	  print '<p><strong>Chapter:</strong> '.$content['field_section'][0]['#markup'].'</p>';
+	  print '<strong>Page:</strong> '.$content['field_start_page'][0]['#markup'].' &nbsp; ';
+	  print '<strong>Table:</strong> '.$content['field_identifier'][0]['#markup'].'</p>';
 	  //print render($content['body']);
 	  print '<p>'.$content['body'][0]['#markup'].'</p>';	  print '<p><strong>Date Submitted:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->created).'<br/><strong>Last Modified:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->changed).'</p>';
-
+	  
 	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles)) {
 		//dpm($content);
 		if(isset($content['field_edit_tracking'])){
@@ -132,7 +137,6 @@ global $base_url;
 			print $edit_tracking;
 		}
 	  }
-
 ?>
   </div>
 

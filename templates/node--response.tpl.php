@@ -107,7 +107,9 @@ global $base_url;
 	  
 	  //print render($content['body']);
 	  print '<p><strong>Status:</strong> '.$content['field_response_status']['#items'][0]['taxonomy_term']->name.'</p>';
-	  print '<p>'.$content['body'][0]['#markup'].'</p>';
+	  if(isset($content['body'])){
+	  	print '<p>'.$content['body'][0]['#markup'].'</p>';
+	  }
 	  
 	if(isset($content['field_edit_tracking'])){
 		$edit_tracking = '<hr/><p class="instructions"><strong>Edit History:</strong>';
