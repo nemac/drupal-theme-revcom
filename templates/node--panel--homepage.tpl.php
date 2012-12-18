@@ -77,20 +77,8 @@
  * @see template_preprocess_node()
  * @see template_process()
  */
- 
-global $user;
-global $base_url;
-
 ?>
-<?php if ($page && $user->uid != $content['body']['#object']->uid && $user->uid != 1 && !in_array('administrator', $user->roles)): ?>
-  <?php $this_cid = $content['body']['#object']->nid; ?>
-  <?php $this_gid = $content['og_group_ref']['#items'][0]['target_id']; ?>
-    <?php drupal_goto($base_url.'/node/'.$this_gid.'/comment-response/'.$this_cid); ?>
-  <?php endif; ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <?php print render($title_prefix); ?>
-  <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted): ?>
     <div class="meta submitted">
@@ -104,40 +92,8 @@ global $base_url;
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-	  print '<p><strong>Comment ID:</strong> '.$content['body']['#object']->nid;
-	  print ' &nbsp; <strong>User ID:</strong> '.$content['body']['#object']->uid;
-	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles) || $user->uid != $content['body']['#object']->uid) {
-		  if(isset($content['field_comment_flag'])){
-			$flag_count = count($content['field_comment_flag']['#items']);
-			$flags = '';
-			for($i=0;$i<$flag_count;$i++){
-				if($i > 0){
-					$flags .= ', ';	
-				}
-				$flags .= $content['field_comment_flag'][$i]['#markup'];
-			}
-	  		print '<br/><strong>Flag(s):</strong> '.$flags;
-		  }
-	  }
-	  $group_title = $content['og_group_ref'][0]['#title'].' - ';
-	  $chapter_reference = $content['field_chapter_reference']['#items'][0]['entity']->field_heading['und'][0]['value'];  
-	  print '<p><strong>Chapter:</strong> '.$chapter_reference.'<br/>';
-	  print '<strong>Page:</strong> '.$content['field_start_page'][0]['#markup'].'</p>';
-	  //print render($content['body']);
-	  print '<p>'.$content['body'][0]['#markup'].'</p>';	  print '<p><strong>Date Submitted:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->created).'<br/><strong>Last Modified:</strong> '.date('m/d/Y - g:i', $content['body']['#object']->changed).'</p>';
-	  
-	  if ($user->uid == 1 || in_array('administrator', $user->roles) || in_array('manager', $user->roles)) {
-		//dpm($content);
-		if(isset($content['field_edit_tracking'])){
-			$edit_tracking = '<hr/><p class="instructions"><strong>Edit History:</strong>';
-			foreach($content['field_edit_tracking']['#items'] as $edit){
-				$edit_tracking .= '<br/>'.$edit['safe_value'];
-			}
-			$edit_tracking .= '</p>';
-			print $edit_tracking;
-		}
-	  }
-?>
+      print render($content);
+    ?>
   </div>
 
   <?php

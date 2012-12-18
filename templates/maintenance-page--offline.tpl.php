@@ -10,6 +10,10 @@
  * @see template_preprocess_maintenance_page()
  * @see bartik_process_maintenance_page()
  */
+ $content = '<p>The USGCRP Review and Comment System is currently under maintenance. We should be back shortly. Thank you for your patience.</p>';
+ $title = 'USGCRP Review and Comment System';
+ $site_name = 'USGCRP Review and Comment System';
+ $logo = 'sites/all/themes/nemac-drupal-theme-revcom/logo.png';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

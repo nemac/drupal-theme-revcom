@@ -93,6 +93,13 @@ if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
 	}
 }
 
+// Replace the Offline Comments title with the File ID and File Name for display
+if(isset($node) && strpos($node->type, 'offline_comments') !== FALSE){
+	if(isset($node->field_comments_file['und'])){
+		$title = $node->field_comments_file['und'][0]['filename'];
+	}
+}
+
 ?>
 <div id="page-wrapper"><div id="page">
 
@@ -115,7 +122,7 @@ if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
               </strong>
             </div>
           <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+            <h1 id="site-name"<?php //if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
             </h1>
           <?php endif; ?>
@@ -185,9 +192,9 @@ if(isset($node) && strpos($node->type, 'comment_') !== FALSE){
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
+    <?php /*if ($breadcrumb): 
+      print '<div id="breadcrumb">'.$breadcrumb.'</div>';
+     endif;*/?>
 
     <?php if ($page['sidebar_first']): ?>
       <div id="sidebar-first" class="column sidebar"><div class="section">
