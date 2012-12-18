@@ -140,7 +140,7 @@ if(isset($node) && strpos($node->type, 'offline_comments') !== FALSE){
     <?php print render($page['header']); ?>
     </div>
 
-	<div id="headerimg"></div>
+	
 
     <?php if ($main_menu): ?>
       <div id="main-menu" class="navigation">
